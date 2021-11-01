@@ -5,16 +5,16 @@ function NewPizza(size, crust) {
   this.toppings = [];
 }
 
-var deliveryCost = 200;
+var deliveryCost = 100;
 
-var smallPizza = 150;
-var mediumPizza = 300;
-var largePizza = 450;
+var smallPizza = 200;
+var mediumPizza = 250;
+var largePizza = 300;
 
-var stuffedCrust = 110;
-var flatBreadCrust = 70;
-var thinCrust = 50;
-var thickCrust = 80;
+var stuffedCrust = 150;
+var flatBreadCrust = 100;
+var thinCrust = 150;
+var thickCrust = 150;
 
 var smPep = 40;
 var smBac = 60;
@@ -210,11 +210,11 @@ $(document).ready(function() {
         var jsdelivr = document.forms[1].deliveryOption;
         console.log(jsdelivr);
         if (jsdelivr.value === "No") {
-          $("#costOutput").text("Dear Esteemed Customer, your total cost will be ksh. " + totalPizzaCost.toString());
+          $("#costOutput").text("Your total cost will be ksh. " + totalPizzaCost.toString());
         }
         else if (jsdelivr.value === "Yes") {
           totalPizzaCost += deliveryCost;
-          $("#costOutput").text("Dear Esteemed Customer, your total cost will be ksh " + totalPizzaCost.toString() + ". Your order will be delivered to your location.");
+          $("#costOutput").text("Your total cost will be ksh " + totalPizzaCost.toString() + ". Delivery will be made at your location.");
         }
       });
     });
